@@ -5,17 +5,21 @@ import App from './app/layout/App';
 import reportWebVitals from './reportWebVitals';
 import { Router } from 'react-router-dom';
 import { createBrowserHistory } from "history";
-import { StoreProvider } from './app/context/StoreContext';
+import { Provider } from 'react-redux';
+import { store } from './app/store/configureStore';
+
+console.log(store.getState());
 
 export const history = createBrowserHistory();
+
 // Line 13: Routing solution with history prop for React router 6
 // https://lifesaver.codes/answer/bug-how-to-navigate-outside-react-context-in-v6-8264
 ReactDOM.render(
   <React.StrictMode>
-    <Router history={history}>  
-      <StoreProvider>
+    <Router history={history}>
+      <Provider store={store}>
         <App />
-      </StoreProvider>
+      </Provider>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
