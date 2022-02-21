@@ -40,7 +40,7 @@ export default function Header({ darkMode, handleThemeChange }: Props) {
             <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <Box display='flex' alignItems='center'>
                     <Typography variant='h6' component={NavLink}
-                        to='/'
+                        exact to='/'
                         sx={navStyles}>
                         Guuji Yae
                     </Typography>

@@ -27,11 +27,9 @@ export default function ProductCard({ product }: Props) {
                 }}
             />
             <CardMedia
-                sx={{ backgroundSize: 'contain', bgcolor: 'primary.light'}}
-                component="img"
-                height="220"
+                sx={{ height: 140, backgroundSize: 'contain', bgcolor: 'primary.light' }}
                 image={product.pictureUrl}
-                alt={product.name}
+                title={product.name}
             />
             <CardContent>
                 <Typography gutterBottom color='secondary' variant="h5">
